@@ -1,0 +1,43 @@
+{{> header}}
+
+<div class="main">
+  <div class="headers">
+    <h1>Check Today's Weather</h1>
+  </div>
+  <div class="form">
+    <form action="/" method="post">
+      <input id="city" type="text" name="cityName">
+      <button class="submit-btn" type="submit" name="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="response">
+
+    <div class="card-success">
+      <div class="city">
+      </div>
+      <div class="top flex-container">
+        <div class="icon column-top">
+        </div>
+        <div class="temp column-top"></div>
+      </div>
+      <div class="description">
+      </div>
+      <div class="bottom flex-container">
+        <div class="hum-max-min left column">
+        </div>
+        <div class="feelslike-pressure-wind right column">
+        </div>
+      </div>
+      <div style="background-color:black" class="success bg"></div>
+    </div>
+
+    <div class="card-failure">
+      <h3>Ups! City name not found. <br>Please try again.</h3>
+      <div style="background-color:red" class="failure bg">
+      </div>
+    </div>
+  </div>
+</div>
+
+{{> footer}}

@@ -1,0 +1,183 @@
+body,
+html {
+  min-height: 100%;
+}
+
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  background: url("/img/background.jpeg") no-repeat center top;
+  max-width: 100%;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main {
+  text-align: center;
+  width: 325px;
+  max-width: 325px;
+}
+
+@media screen and (min-width: 769px) {
+  .main {
+    margin-top: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 760px) {
+  .main {
+    margin-top: 120px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .main {
+    margin-top: 80px;
+  }
+
+  .main h1 {
+    font-size: 27px;
+  }
+
+  .main .temp p {
+    font-size: 40px;
+  }
+
+  .main .left {
+    margin-left: 8px;
+  }
+}
+
+.response {
+  position: relative;
+  z-index: 1;
+}
+
+.bg {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  opacity: 0.4;
+  z-index: -1;
+  border-radius: 5px;
+  margin-top: -10px;
+}
+
+h1 {
+  margin-bottom: 18px;
+}
+
+form button,
+form input {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: none;
+}
+
+form input {
+  width: 97%;
+  height: 27px;
+  padding-left: 6px;
+}
+
+form button {
+  color: white;
+  background-color: #1b98fe;
+}
+
+.submit-btn {
+  width: 90px;
+  height: 35px;
+  margin-top: 23px;
+  margin-bottom: 36px;
+}
+
+.return-btn {
+  padding: 8px 8px 10px;
+  width: 145px;
+  height: 40px;
+
+}
+
+form button:hover {
+  cursor: pointer;
+}
+
+.city {
+  margin-bottom: -35px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.top .flex-container {
+  height: 100px;
+}
+
+.icon {
+  margin-right: -8px;
+  margin-top: -5px;
+}
+
+.column-top {
+  flex: 50%;
+  max-width: 50%;
+}
+
+.left,
+.right {
+  flex: 50%;
+  max-width: 50%;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.left {
+  margin-left: 25px;
+}
+
+.temp p {
+  font-size: 45px;
+  margin: 23px 0 20px;
+  padding-right: 30px;
+}
+
+.description p {
+  font-size: 21px;
+  margin-top: -13px;
+  margin-bottom: 5px;
+}
+
+.card-success {
+  display: none;
+  height: 272px;
+  min-height: 272px;
+}
+
+.card-failure {
+  display: none;
+  transition: .4s;
+}
+
+.card-failure h3 {
+  padding-bottom: 10px;
+}
+
+.error {
+  padding-top: 100%;
+}
