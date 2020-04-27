@@ -27,6 +27,10 @@ body {
   background-color: black;
 }
 
+.response {
+  text-align: center;
+}
+
 @media screen and (min-width: 401px) {
   .main {
     width: 318px;
