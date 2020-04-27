@@ -51,7 +51,7 @@ weatherForm.addEventListener('submit', (event) => {
       } else {
         console.log(data);
 
-        const imageURL = `http://openweathermap.org/img/wn/${data.icon}@2x.png`;
+        const imageURL = `https://openweathermap.org/img/wn/${data.icon}@2x.png`;
 
         city.innerHTML = `<h1>${data.city}, ${data.country}</h1>`;
 
