@@ -35,14 +35,6 @@ h1 {
   font-size: 28px;
 }
 
-@media screen and (min-width: 401px) {
-
-  .main {
-    width: 318px;
-    width: 318px;
-  }
-}
-
 @media screen and (min-width: 769px) {
   .main {
     margin-top: 200px;
@@ -56,7 +48,6 @@ h1 {
 }
 
 @media screen and (max-width: 759px) and (min-width: 401px) {
-
   .main {
     margin-top: 80px;
   }
@@ -70,27 +61,44 @@ h1 {
   }
 }
 
+@media screen and (min-width: 401px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .main {
+    width: 318px;
+    width: 318px;
+  }
+}
+
 @media screen and (max-width: 400px) and (min-width: 322px) {
+  h1 {
+    font-size: 30px;
+  }
 
   .main {
     margin-top: 70px;
   }
 
   .main, .gm-err-autocomplete {
-    width: 335px;
-    max-width: 335px;
+    width: 318px;
+    max-width: 318px;
   }
 }
 
 @media screen and (max-width: 321px) {
+  h1 {
+    font-size: 28px;
+  }
 
   .main {
     margin-top: -5px;
   }
 
   .main, .gm-err-autocomplete {
-    width: 300px;
-    max-width: 300px;
+    width: 290px;
+    max-width: 290px;
   }
 }
 
