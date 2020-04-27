@@ -1,14 +1,14 @@
-const input = document.getElementById('city');
-const autocomplete = new google.maps.places.Autocomplete(input, {
-  types: ['(cities)']
-});
-google.maps.event.addListener(autocomplete, 'place_changed', function() {
-  const place = autocomplete.getPlace();
-})
-
-if (window.history.replaceState) {
-  window.history.replaceState(null, null, window.location.href);
-}
+// const input = document.getElementById('city');
+// const autocomplete = new google.maps.places.Autocomplete(input, {
+//   types: ['(cities)']
+// });
+// google.maps.event.addListener(autocomplete, 'place_changed', function() {
+//   const place = autocomplete.getPlace();
+// })
+//
+// if (window.history.replaceState) {
+//   window.history.replaceState(null, null, window.location.href);
+// }
 
 let vh = window.innerHeight * 0.01;
 
@@ -41,6 +41,11 @@ weatherForm.addEventListener('submit', (event) => {
 
       if (data.error) {
         cardSuccess.style.display = 'none';
+
+        cardFailure.innerHTML = `<h3>${data.error}</h3>
+        <div style="background-color:red" class="failure bg">
+        </div>`;
+
         cardFailure.style.display = 'initial';
 
       } else {

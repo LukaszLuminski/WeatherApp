@@ -39,9 +39,9 @@ const weatherData = (address, callback) => {
   }) => {
 
     if (error) {
-      callback("Can't fetch data from OpenWeatherMap API", undefined);
+      callback("Can't fetch data from OpenWeatherMap API.", undefined);
     } else if (!body.main || !body.weather || !body.wind || !body.sys) {
-      callback("Unable to find required data, try another location", undefined);
+      callback("Oops! Location not found. <br> Please try again.", undefined);
     } else {
       callback(undefined, {
         city: body.name,
@@ -72,7 +72,7 @@ app.get("/weather", (req, res) => {
   const address = req.query.address;
   if (!address) {
     return res.send({
-      error: "You must enter address in search text box"
+      error: "Please enter a location name <br> in search text box."
     })
   }
 
@@ -95,7 +95,6 @@ app.get("/weather", (req, res) => {
         error
       })
     }
-    console.log(city, country, description, temp, windSpeed, minTemp, maxTemp, feelsLike, humidity, pressure, icon, imageUrl);
     res.send({
       city,
       country,
