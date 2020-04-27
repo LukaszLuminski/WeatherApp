@@ -1,8 +1,10 @@
 //jshint esversion:6
 
+const enforce = require('express-sslify');
 const express = require("express");
 const request = require("request");
 const path = require("path");
+var http = require('http');
 const hbs = require("hbs");
 const app = express();
 
@@ -67,6 +69,7 @@ const weatherData = (address, callback) => {
   });
 };
 
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 app.get("/weather", (req, res) => {
 
   const address = req.query.address;
@@ -121,6 +124,10 @@ app.post("*", function(req, res) {
   res.redirect("/");
 });
 
+// http.createServer(app).listen(app.get('port'), function() {
+//     console.log('Express server listening on port ' + app.get('port'));
+// });
+//
 app.listen(port, function() {
   console.log("Server is running on port: ", port);
 });
