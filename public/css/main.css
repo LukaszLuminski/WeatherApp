@@ -105,7 +105,12 @@ body {
 }
 
 h1 {
-  margin-bottom: 18px;
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.headers {
+  padding-bottom: 15px;
 }
 
 h2 {
@@ -120,7 +125,7 @@ h2 {
 
 @media screen and (max-width: 401px) {
   h1 {
-    font-size: 27px;
+    font-size: 28px;
   }
 }
 
