@@ -93,6 +93,11 @@ form input {
   padding-left: 6px;
 }
 
+.pac-icon {
+  width: 0;
+  background-image: none;
+}
+
 form button {
   color: white;
   background-color: #1b98fe;
