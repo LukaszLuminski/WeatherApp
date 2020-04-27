@@ -67,13 +67,11 @@ body {
   @media screen and (max-width: 400px) {
     .main {
       margin-top: 70px;
-      width: 272px;
-      max-width: 272px;
     }
 
-    .gm-err-autocomplete {
-      width: 272px;
-      max-width: 272px;
+    .main, .gm-err-autocomplete {
+      width: 285px;
+      max-width: 285px;
     }
   }
 
