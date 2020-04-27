@@ -128,6 +128,11 @@ app.post("*", function(req, res) {
 //     console.log('Express server listening on port ' + app.get('port'));
 // });
 //
-app.listen(port, function() {
-  console.log("Server is running on port: ", port);
+
+http.createServer(app).listen(app.get('port'), function() {
+    console.log('Express server listening on port ' + app.get('port'));
 });
+
+// app.listen(port, function() {
+//   console.log("Server is running on port: ", port);
+// });
