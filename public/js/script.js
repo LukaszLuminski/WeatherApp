@@ -1,13 +1,18 @@
-const input = document.getElementById('city');
-const autocomplete = new google.maps.places.Autocomplete(input, {
-  types: ['(cities)']
-});
-google.maps.event.addListener(autocomplete, 'place_changed', function() {
-  const place = autocomplete.getPlace();
-})
+let currentUrl = location || document.location;
 
-if (window.history.replaceState) {
-  window.history.replaceState(null, null, window.location.href);
+if (currentUrl === 'https://weather-app-ll.herokuapp.com/') {
+
+  const input = document.getElementById('city');
+  const autocomplete = new google.maps.places.Autocomplete(input, {
+    types: ['(cities)']
+  });
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+    const place = autocomplete.getPlace();
+  })
+
+  if (window.history.replaceState) {
+    window.history.replaceState(null, null, window.location.href);
+  }
 }
 
 let vh = window.innerHeight * 0.01;
