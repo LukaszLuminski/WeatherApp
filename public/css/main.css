@@ -31,10 +31,6 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-size: 28px !important;
-}
-
 @media screen and (min-width: 401px) {
 
   .main {
@@ -116,6 +112,10 @@ h1 {
   margin: 0 auto;
   width: 99vw;
   max-width: 330px;
+}
+
+.headers h1 {
+  font-size: 28px;
 }
 
 h2 {
