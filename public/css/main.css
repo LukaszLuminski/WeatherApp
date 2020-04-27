@@ -32,6 +32,11 @@ body {
 }
 
 @media screen and (min-width: 401px) {
+
+  h1 {
+    font-size: 31px;
+  }
+  
   .main {
     width: 318px;
     width: 318px;
@@ -126,12 +131,6 @@ h1 {
 
 h2 {
   font-size: 27px;
-}
-
-@media screen and (min-width: 401px) {
-  h1 {
-    font-size: 31px;
-  }
 }
 
 button,
