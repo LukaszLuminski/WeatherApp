@@ -1,22 +1,24 @@
-const input = document.getElementById('city');
-const autocomplete = new google.maps.places.Autocomplete(input, {
-  types: ['(cities)']
-});
-google.maps.event.addListener(autocomplete, 'place_changed', function() {
-  const place = autocomplete.getPlace();
-})
-
-if (window.history.replaceState) {
-  window.history.replaceState(null, null, window.location.href);
-}
+// const input = document.getElementById('city');
+// const autocomplete = new google.maps.places.Autocomplete(input, {
+//   types: ['(cities)']
+// });
+// google.maps.event.addListener(autocomplete, 'place_changed', function() {
+//   const place = autocomplete.getPlace();
+// })
+//
+// if (window.history.replaceState) {
+//   window.history.replaceState(null, null, window.location.href);
+// }
 
 let vh = window.innerHeight * 0.01;
 
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 const fetchWeather = '/weather';
-const card = document.querySelector('.response');
+const successFadeIn = document.querySelector('.success-inner');
+const failureFadeIn = document.querySelector('.failure-inner');
 const cardSuccess = document.querySelector('.card-success');
+const error = document.querySelector('.error-text');
 const cardFailure = document.querySelector('.card-failure');
 const weatherForm = document.querySelector('.main form');
 const search = document.querySelector('input');
@@ -42,11 +44,10 @@ weatherForm.addEventListener('submit', (event) => {
       if (data.error) {
         cardSuccess.style.display = 'none';
 
-        cardFailure.innerHTML = `<h3>${data.error}</h3>
-        <div style="background-color:red" class="failure bg">
-        </div>`;
+        error.innerHTML = `<h3>${data.error}</h3>`;
 
         cardFailure.style.display = 'initial';
+        failureFadeIn.classList.add("animated");
 
       } else {
         console.log(data);
@@ -70,6 +71,7 @@ weatherForm.addEventListener('submit', (event) => {
         <p>Wind ${data.windSpeed} km/h</p>`;
 
         cardSuccess.style.display = 'initial';
+        successFadeIn.classList.add("animated");
         cardFailure.style.display = 'none';
       }
     });
