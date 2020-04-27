@@ -77,8 +77,8 @@ h1 {
   }
 
   .main, .gm-err-autocomplete {
-    width: 325px;
-    max-width: 325px;
+    width: 340px;
+    max-width: 340px;
   }
 }
 
@@ -89,8 +89,8 @@ h1 {
   }
 
   .main, .gm-err-autocomplete {
-    width: 285px;
-    max-width: 285px;
+    width: 300px;
+    max-width: 300px;
   }
 }
 
