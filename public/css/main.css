@@ -31,12 +31,12 @@ body {
   text-align: center;
 }
 
+h1 {
+  font-size: 29px;
+}
+
 @media screen and (min-width: 401px) {
 
-  h1 {
-    font-size: 31px;
-  }
-  
   .main {
     width: 318px;
     width: 318px;
@@ -71,9 +71,6 @@ body {
 }
 
 @media screen and (max-width: 400px) and (min-width: 322px) {
-  h1 {
-    font-size: 29px;
-  }
 
   .main {
     margin-top: 70px;
@@ -86,9 +83,6 @@ body {
 }
 
 @media screen and (max-width: 321px) {
-  h1 {
-    font-size: 28px;
-  }
 
   .main {
     margin-top: -5px;
@@ -118,13 +112,7 @@ body {
   margin-top: -10px;
 }
 
-h1 {
-  margin: 18px 0 0;
-  padding: 0;
-}
-
 .headers {
-  padding-bottom: 15px;
   width: 100vw;
   max-width: 330px;
 }
