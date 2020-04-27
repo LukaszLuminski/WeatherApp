@@ -67,7 +67,7 @@ weatherForm.addEventListener('submit', (event) => {
 
       } else {
 
-        city.innerHTML = `<h1>${data.city}, ${data.country}</h1>`;
+        city.innerHTML = `<h2>${data.city}, ${data.country}</h2>`;
 
         picture.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.icon}@2x.png" alt="Weather icon">`;
 

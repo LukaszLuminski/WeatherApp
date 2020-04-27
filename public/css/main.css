@@ -39,10 +39,6 @@ body {
 }
 
 @media screen and (min-width: 769px) {
-  h1 {
-    font-size: 29px;
-  }
-
   .main {
     margin-top: 200px;
   }
@@ -59,10 +55,6 @@ body {
     margin-top: 80px;
   }
 
-  .main h1 {
-    font-size: 27px;
-  }
-
   .main .temp p {
     font-size: 40px;
   }
@@ -73,10 +65,6 @@ body {
 }
 
 @media screen and (max-width: 400px) and (min-width: 322px) {
-  h1 {
-    font-size: 29px;
-  }
-
   .main {
     margin-top: 70px;
   }
@@ -88,10 +76,6 @@ body {
 }
 
 @media screen and (max-width: 321px) {
-  h1 {
-    font-size: 28px;
-  }
-
   .main {
     margin-top: -5px;
   }
@@ -122,6 +106,22 @@ body {
 
 h1 {
   margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 27px;
+}
+
+@media screen and (min-width: 401px) {
+  h1 {
+    font-size: 31px;
+  }
+}
+
+@media screen and (max-width: 401px) {
+  h1 {
+    font-size: 28px;
+  }
 }
 
 button,
