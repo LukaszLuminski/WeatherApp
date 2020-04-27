@@ -1,9 +1,8 @@
-let currentUrl = location || document.location;
-
-console.log(currentUrl);
 
 const initPlacesApi = () => {
+  let currentUrl = location || document.location;
   if (currentUrl !== 'https://weather-app-ll.herokuapp.com/') {
+    console.log(currentUrl);
     return;
   } else {
 
