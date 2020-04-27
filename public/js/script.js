@@ -56,11 +56,9 @@ weatherForm.addEventListener('submit', (event) => {
 
       } else {
 
-        const imageURL = `https://openweathermap.org/img/wn/${data.icon}@2x.png`;
-
         city.innerHTML = `<h1>${data.city}, ${data.country}</h1>`;
 
-        picture.innerHTML = `<img src="${imageURL}" alt="Weather icon">`;
+        picture.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.icon}@2x.png" alt="Weather icon">`;
 
         temperature.innerHTML = `<p>${data.temp} &degC</p>`;
 

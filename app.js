@@ -9,9 +9,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const publicStaticDirPath = path.join(__dirname, './public')
-
 const viewsPath = path.join(__dirname, './templates/views');
-
 const partialsPath = path.join(__dirname, './templates/partials');
 
 app.set("view engine", "hbs");
@@ -39,7 +37,7 @@ const weatherData = (address, callback) => {
   }) => {
 
     if (error) {
-      callback("Can't fetch data from OpenWeatherMap API.", undefined);
+      callback("Oops! Can't fetch data from OpenWeatherMap API.", undefined);
     } else if (!body.main || !body.weather || !body.wind || !body.sys) {
       callback("Oops! Location not found. <br> Please try again.", undefined);
     } else {
@@ -54,14 +52,7 @@ const weatherData = (address, callback) => {
         maxTemp: Math.round(body.main.temp_max),
         feelsLike: Math.round(body.main.feels_like),
         humidity: body.main.humidity,
-        pressure: body.main.pressure,
-        imageurl: ()=> {
-
-          const icon = body.weather[0].icon;
-          const url = `http://openweathermap.org/img/wn/${icon}@2x.png`;
-
-          return url;
-        }
+        pressure: body.main.pressure
       })
     }
   });
@@ -87,8 +78,7 @@ app.get("/weather", (req, res) => {
     feelsLike,
     humidity,
     pressure,
-    icon,
-    imageUrl
+    icon
   } = {}) => {
     if (error) {
       return res.send({
@@ -106,8 +96,7 @@ app.get("/weather", (req, res) => {
       feelsLike,
       humidity,
       pressure,
-      icon,
-      imageUrl
+      icon
     })
   });
 });
