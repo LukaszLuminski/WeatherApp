@@ -27,10 +27,6 @@ body {
   background-color: black;
 }
 
-.main {
-  text-align: center;
-}
-
 @media screen and (min-width: 401px) {
   .main {
     width: 318px;
@@ -111,6 +107,8 @@ h1 {
 
 .headers {
   padding-bottom: 15px;
+  width: 100vw;
+  max-width: 330px;
 }
 
 h2 {
