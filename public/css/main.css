@@ -70,7 +70,7 @@ body {
 
 @media screen and (max-width: 400px) and (min-width: 322px) {
   h1 {
-    font-size: 30px;
+    font-size: 27px;
   }
 
   .main {
@@ -78,8 +78,8 @@ body {
   }
 
   .main, .gm-err-autocomplete {
-    width: 335px;
-    max-width: 335px;
+    width: 325px;
+    max-width: 325px;
   }
 }
 
