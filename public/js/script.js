@@ -34,6 +34,11 @@ weatherForm.addEventListener('submit', (event) => {
 
   event.preventDefault();
 
+  successFadeIn.classList.remove("animated");
+  failureFadeIn.classList.remove("animated");
+  cardSuccess.style.display = 'none';
+  cardFailure.style.display = 'none';
+
   const locationApi = fetchWeather + "?address=" + search.value;
 
   fetch(locationApi).then(response => {
@@ -50,7 +55,6 @@ weatherForm.addEventListener('submit', (event) => {
         failureFadeIn.classList.add("animated");
 
       } else {
-        console.log(data);
 
         const imageURL = `https://openweathermap.org/img/wn/${data.icon}@2x.png`;
 
