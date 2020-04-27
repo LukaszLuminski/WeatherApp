@@ -1,17 +1,23 @@
 let currentUrl = location || document.location;
 
-if (currentUrl === 'https://weather-app-ll.herokuapp.com/') {
+console.log(currentUrl);
 
-  const input = document.getElementById('city');
-  const autocomplete = new google.maps.places.Autocomplete(input, {
-    types: ['(cities)']
-  });
-  google.maps.event.addListener(autocomplete, 'place_changed', function() {
-    const place = autocomplete.getPlace();
-  })
+const initPlacesApi = () => {
+  if (currentUrl !== 'https://weather-app-ll.herokuapp.com/') {
+    return;
+  } else {
 
-  if (window.history.replaceState) {
-    window.history.replaceState(null, null, window.location.href);
+    const input = document.getElementById('city');
+    const autocomplete = new google.maps.places.Autocomplete(input, {
+      types: ['(cities)']
+    });
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+      const place = autocomplete.getPlace();
+    })
+
+    if (window.history.replaceState) {
+      window.history.replaceState(null, null, window.location.href);
+    }
   }
 }
 
