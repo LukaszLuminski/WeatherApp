@@ -61,7 +61,7 @@ body {
 
   @media screen and (max-width: 320px) {
     .main {
-      margin-top: 0;
+      margin-top: -5px;
     }
 
     .gm-err-autocomplete {
@@ -183,7 +183,7 @@ form button:hover {
 
 .description p {
   font-size: 21px;
-  margin-top: -13px;
+  margin-top: -16px;
   margin-bottom: 5px;
 }
 
