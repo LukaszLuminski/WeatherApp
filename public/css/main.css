@@ -42,7 +42,7 @@ body {
   .main .temp p {
     font-size: 40px; }
   .main .left {
-    margin-left: 8px; }
+    margin-left: 28px; }
 
 @media screen and (min-width: 401px) {
   h1 {
