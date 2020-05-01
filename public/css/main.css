@@ -129,6 +129,8 @@ form button:hover {
 
 .city {
   margin-bottom: -35px; }
+  .city h2 {
+    padding-top: 8px; }
 
 .flex-container {
   display: flex;
