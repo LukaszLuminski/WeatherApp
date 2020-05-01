@@ -36,7 +36,7 @@ body {
   @media screen and (max-width: 768px) and (min-width: 401px) {
     .main {
       margin-top: 100px; } }
-  @media screen and (max-width: 1000px) and (orientation: landscape) {
+  @media screen and (max-width: 1025px) and (orientation: landscape) {
     .main {
       margin-top: 50px; } }
   .main .temp p {
