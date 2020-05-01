@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ui": "browser-sync start --proxy=localhost:3000 --files='**/*.css, **/*.js' --ignore=node_modules --reload-delay 10 --no-ui --no-notify"
+    "ui": "browser-sync start --proxy=localhost:3000 --files='**/*.css, **/*.js' --ignore=node_modules --reload-delay 10 --no-ui --no-notify",
+    "scss": "node-sass --watch public/scss -o public/css"
   },
   "author": "Lukasz Luminski",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "browser-sync": "^2.26.7",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
+    "node-sass": "^4.14.0",
     "path": "^0.12.7",
     "request": "^2.88.2"
   }
