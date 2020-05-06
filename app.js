@@ -8,7 +8,7 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
-const publicStaticDirPath = path.join(__dirname, './public')
+const publicStaticDirPath = path.join(__dirname, './public');
 const viewsPath = path.join(__dirname, './templates/views');
 const partialsPath = path.join(__dirname, './templates/partials');
 
@@ -23,7 +23,7 @@ app.get("/", (req, res) => {
 
 const weatherData = (address, callback) => {
 
-  const apiKey = "31dc1f1f2f4972d0e5a614cc631f0299"
+  const apiKey = "31dc1f1f2f4972d0e5a614cc631f0299";
 
   const units = "metric";
 
