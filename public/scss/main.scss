@@ -42,13 +42,13 @@ body {
     margin-top: 50px;
   }
 
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 767px) {
     .left {
        margin-left: 28px;
      }
   }
 
-  @media screen and (max-width: 399px) {
+  @media screen and (max-width: 766px) {
     .left {
        margin-left: 20px;
      }

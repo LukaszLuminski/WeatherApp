@@ -39,10 +39,10 @@ body {
   @media screen and (max-width: 1025px) and (orientation: landscape) {
     .main {
       margin-top: 50px; } }
-  @media screen and (min-width: 400px) {
+  @media screen and (min-width: 767px) {
     .main .left {
       margin-left: 28px; } }
-  @media screen and (max-width: 399px) {
+  @media screen and (max-width: 766px) {
     .main .left {
       margin-left: 20px; } }
   .main .temp p {
