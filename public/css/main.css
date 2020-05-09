@@ -39,10 +39,14 @@ body {
   @media screen and (max-width: 1025px) and (orientation: landscape) {
     .main {
       margin-top: 50px; } }
+  @media screen and (min-width: 400px) {
+    .main .left {
+      margin-left: 28px; } }
+  @media screen and (max-width: 399px) {
+    .main .left {
+      margin-left: 20px; } }
   .main .temp p {
     font-size: 40px; }
-  .main .left {
-    margin-left: 28px; }
 
 @media screen and (min-width: 401px) {
   h1 {
@@ -153,9 +157,6 @@ form button:hover {
   max-width: 50%;
   text-align: left;
   margin-bottom: 8px; }
-
-.left {
-  margin-left: 25px; }
 
 .temp p {
   font-size: 45px;

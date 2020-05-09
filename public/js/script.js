@@ -1,3 +1,4 @@
+//jshint esversion:6
 
 const initPlacesApi = () => {
   if (location.href !== 'https://weather-app-ll.herokuapp.com/') {
@@ -11,13 +12,13 @@ const initPlacesApi = () => {
     });
     google.maps.event.addListener(autocomplete, 'place_changed', function() {
       const place = autocomplete.getPlace();
-    })
+    });
 
     if (window.history.replaceState) {
       window.history.replaceState(null, null, window.location.href);
     }
   }
-}
+};
 
 initPlacesApi();
 
@@ -71,6 +72,14 @@ weatherForm.addEventListener('submit', (event) => {
 
         picture.innerHTML = `<img src="https://openweathermap.org/img/wn/${data.icon}@2x.png" alt="Weather icon">`;
 
+        const image = document.querySelector('.icon img');
+
+        if (data.icon === '50d' || data.icon === '50n') {
+          image.style.filter = 'brightness(280%)';
+        } else {
+          image.style.filter = 'brightness(100%)';
+        }
+
         temperature.innerHTML = `<p>${data.temp} &degC</p>`;
 
         desc.innerHTML = `<p>${data.description}.</p>`;
@@ -88,5 +97,5 @@ weatherForm.addEventListener('submit', (event) => {
         cardFailure.style.display = 'none';
       }
     });
-  })
-})
+  });
+});

@@ -41,11 +41,20 @@ body {
   @media screen and (max-width: 1025px) and (orientation:landscape){
     margin-top: 50px;
   }
+
+  @media screen and (min-width: 400px) {
+    .left {
+       margin-left: 28px;
+     }
+  }
+
+  @media screen and (max-width: 399px) {
+    .left {
+       margin-left: 20px;
+     }
+  }
  .temp p {
     font-size: 40px;
-  }
- .left {
-    margin-left: 28px;
   }
 }
 
@@ -57,7 +66,6 @@ body {
   .main {
     width: 318px;
     width: 318px;
-    // margin-top: 70px;
   }
 }
 
@@ -191,10 +199,6 @@ form button:hover {
   max-width: 50%;
   text-align: left;
   margin-bottom: 8px;
-}
-
-.left {
-  margin-left: 25px;
 }
 
 .temp p {
