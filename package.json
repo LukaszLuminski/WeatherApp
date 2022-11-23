@@ -11,7 +11,7 @@
   "author": "Lukasz Luminski",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
     "node-sass": "^4.14.0",
